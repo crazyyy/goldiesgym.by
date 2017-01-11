@@ -1,11 +1,3 @@
-@import 'import/variables';
-@import 'import/mixin';
-@import 'theme/jquery.formstyler';
-@import 'theme/bootstrap';
-@import 'theme/ekko-lightbox';
-@import 'theme/slick-theme';
-@import 'theme/slick';
-
 @font-face {
   font-family: "Muller-Bold";
   src: url("../fonts/muller/Muller-Bold.otf") format("opentype");
@@ -2356,6 +2348,3 @@ footer {
     z-index: -1;
   }
 }
-
-
-@import 'import/wordpress';
