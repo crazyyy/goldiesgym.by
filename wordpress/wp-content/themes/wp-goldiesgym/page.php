@@ -1,18 +1,28 @@
 <?php get_header(); ?>
-  <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-      <h1 class="page-title inner-title"><?php the_title(); ?></h1>
-      <?php the_content(); ?>
-      <?php edit_post_link(); ?>
-
-    </article>
-  <?php endwhile; else: // If 404 page error ?>
-    <article>
-
-      <h2 class="page-title inner-title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>
-
-    </article>
-  <?php endif; ?>
-<?php get_sidebar(); ?>
+<section class="news">
+  <div class="container">
+    <div class="row">
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+      <div class="section-body">
+        <div class="news__block">
+          <div class="col-sm-12 news__block-descr">
+            <h3 class="news__block-tittle"><?php the_title(); ?></h3>
+            <?php the_content(); ?>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- end news__block -->
+      </div><!-- end section-body -->
+      <?php endwhile; else: ?>
+        <div class="section-body">
+          <div class="news__block">
+            <h2 class="page-title inner-title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- end news__block -->
+      <?php endif; ?>
+    </div>
+  </div>
+</section>
 <?php get_footer(); ?>

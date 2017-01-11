@@ -17,6 +17,9 @@
   <![endif]-->
   <!-- css + javascript -->
   <?php wp_head(); ?>
+  <?php if ( !is_front_page() && !is_home() ){ ?>
+    <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>//css/inner-pages.css' media='all' />
+  <?php } ?>
 </head>
 <body <?php body_class(); ?>>
 
