@@ -44,6 +44,10 @@ function wpeHeaderScripts() {
     wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.0'); // Google CDN jQuery   RU: Регистрирую JQuery с хостинга Google
     wp_enqueue_script('jquery'); // Enqueue it!    RU: Подключаю его
 
+    wp_deregister_script('gmaps'); // Deregister WordPress jQuery   RU: Отключаю стандартный JQuery WordPress'а
+    wp_register_script('gmaps', '//maps.googleapis.com/maps/api/js', array(), '1.11.0'); // Google CDN jQuery   RU: Регистрирую JQuery с хостинга Google
+    wp_enqueue_script('gmaps'); // Enqueue it!    RU: Подключаю его
+
     wp_register_script('modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3'); // Modernizr
     wp_enqueue_script('modernizr'); // Enqueue it!
 
@@ -108,7 +112,7 @@ function wpeHeadNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="headnav">%3$s</ul>',
+    'items_wrap'      => '<ul class="h-bot__nav clearfix">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
