@@ -1,7 +1,6 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
 
   <?php $current_page_id = get_the_ID(); ?>
-  <?php echo $current_page_id; ?>
 
     <section class="banner">
       <div class="container">
