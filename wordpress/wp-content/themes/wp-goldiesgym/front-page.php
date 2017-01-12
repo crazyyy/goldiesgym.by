@@ -1,13 +1,14 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
 
   <?php $current_page_id = get_the_ID(); ?>
+  <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
     <section class="banner">
       <div class="container">
         <div class="row">
           <div class="slider">
 
-            <?php if( have_rows('home_top_slider', 1064) ): while ( have_rows('home_top_slider', 1064) ) : the_row();?>
+            <?php if( have_rows('home_top_slider') ): while ( have_rows('home_top_slider') ) : the_row();?>
 
               <div class="slider__block">
                 <div class="col-sm-6 col-md-5 slider__block-text">
@@ -44,30 +45,16 @@
         <!-- end section-tittle -->
         <div class="section-body">
           <div class="col-sm-8 about-club__text">
-            <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат только вам.</p>
-            <p>Теперь никто не сможет обвинить вас в плагиате, ибо каждый текст Яндекс.Рефератов неповторим.</p>
-            <p>Текстами рефератов можно пользоваться совершенно бесплатно, однако при транслировании и предоставлении текстов в массовое пользование ссылка на Яндекс.Рефераты обязательна.</p>
-            <div class="col-xs-12 col-sm-4 about-club__block">
-              <div class="about-club__block-icon">
-                <i class="ic ic-power"></i>
+            <?php the_content(); ?>
+            <?php if( have_rows('about') ): while ( have_rows('about') ) : the_row();?>
+              <div class="col-xs-12 col-sm-4 about-club__block">
+                <div class="about-club__block-icon">
+                  <i class="ic <?php the_sub_field('ico'); ?>"></i>
+                </div>
+                <h3><?php the_sub_field('about_small'); ?></h3>
+                <p><?php the_sub_field('content'); ?></p>
               </div>
-              <h3>СИЛА</h3>
-              <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем.</p>
-            </div>
-            <div class="col-xs-12 col-sm-4 about-club__block">
-              <div class="about-club__block-icon">
-                <i class="ic ic-energy"></i>
-              </div>
-              <h3>ЭНЕРГИЯ</h3>
-              <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем.</p>
-            </div>
-            <div class="col-xs-12 col-sm-4 about-club__block">
-              <div class="about-club__block-icon">
-                <i class="ic ic-honor"></i>
-              </div>
-              <h3>СМЕЛОСЬ</h3>
-              <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем.</p>
-            </div>
+            <?php endwhile; endif; ?>
             <div class="clearfix"></div>
           </div>
           <img class="about-club__img" src="<?php echo get_template_directory_uri(); ?>/img/man-img.png" alt="man">
@@ -301,69 +288,17 @@
   <!-- end form-help-wrap -->
   <section class="gallery">
     <div class="gallery__images">
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img1.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img1.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img2.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img2.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img3.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img3.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img1.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img1.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img2.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img2.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img3.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img3.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img4.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img4.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img5.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img5.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img6.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img6.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img4.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img4.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img5.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img5.jpg" class="img-fluid">
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-2 gallery__images-block">
-        <a href="img/gallery-img6.jpg" data-toggle="lightbox" data-gallery="example-gallery">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/gallery-img6.jpg" class="img-fluid">
-        </a>
-      </div>
+      <?php if( have_rows('gallery') ): while ( have_rows('gallery') ) : the_row();?>
+        <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
+          <div class="col-xs-6 col-md-2 gallery__images-block">
+            <a href="<?php echo $image['url']; ?>" data-toggle="lightbox" data-gallery="example-gallery">
+              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid">
+            </a>
+          </div>
+        <?php endif; ?>
+      <?php  endwhile; endif; ?>
       <div class="clearfix"></div>
-    </div>
-    <!-- end gallery__images -->
+    </div><!-- end gallery__images -->
     <div class="gallery__descr-wrap">
       <div class="container">
         <div class="row">
@@ -582,44 +517,30 @@
         </div>
         <!-- end section-tittle -->
         <div class="slider-comments">
-          <div class="slider-comments__block">
-            <div class="slider-comments__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/comment-img1.jpg" alt="comment">
-            </div>
-            <div class="slider-comments__descr">
-              <p class="slider-comments__text">Служба Яндекс.Рефераты предназначена для студентов и школьников, дизайнеров и журналистов, создателей научных заявок и отчетов — для всех, кто относится к тексту, как к количеству знаков. Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат </p>
-              <p class="slider-comments__name">АЛЕКСЕЙ САМОЙЛОВ</p>
-            </div>
-          </div>
-          <!-- end slider__block -->
-          <div class="slider-comments__block">
-            <div class="slider-comments__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/comment-img1.jpg" alt="comment">
-            </div>
-            <div class="slider-comments__descr">
-              <p class="slider-comments__text">Служба Яндекс.Рефераты предназначена для студентов и школьников, дизайнеров и журналистов, создателей научных заявок и отчетов — для всех, кто относится к тексту, как к количеству знаков. Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат </p>
-              <p class="slider-comments__name">СЕРГЕЙ СЕРГЕЕВ</p>
-            </div>
-          </div>
-          <!-- end slider__block -->
-          <div class="slider-comments__block">
-            <div class="slider-comments__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/comment-img1.jpg" alt="comment">
-            </div>
-            <div class="slider-comments__descr">
-              <p class="slider-comments__text">Служба Яндекс.Рефераты предназначена для студентов и школьников, дизайнеров и журналистов, создателей научных заявок и отчетов — для всех, кто относится к тексту, как к количеству знаков. Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат </p>
-              <p class="slider-comments__name">ЭДУАРД СУРОВЫЙ</p>
-            </div>
-          </div>
-          <!-- end slider__block -->
-        </div>
-        <!-- end slider--comments -->
+          <?php if( have_rows('reviews') ): while ( have_rows('reviews') ) : the_row();?>
+            <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
+              <div class="slider-comments__block">
+                <div class="slider-comments__img">
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                </div>
+                <div class="slider-comments__descr">
+                  <?php the_sub_field('comment'); ?>
+                  <span class="slider-comments__name"><?php the_sub_field('name'); ?></span>
+                </div>
+              </div><!-- end slider__block -->
+              <?php endif; ?>
+            <?php endwhile; endif; ?>
+        </div><!-- end slider--comments -->
       </div>
     </div>
   </section>
   <!-- end section.comments -->
 
-
+  <?php endwhile; else: ?>
+    <section>
+      <h2 class="page-title inner-title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>
+    </section>
+  <?php endif; ?>
 
 
 <?php get_footer(); ?>
