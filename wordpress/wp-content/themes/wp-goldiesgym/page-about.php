@@ -89,7 +89,7 @@
           <div class="gallery__images">
 
             <?php if( have_rows('gallery_first_block') ): while ( have_rows('gallery_first_block') ) : the_row();?>
-              <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
+              <?php $image = get_sub_field('images'); if( !empty($image) ): ?>
                 <div class="col-xs-6 col-md-2 gallery__images-block">
                   <a href="<?php echo $image['url']; ?>" data-toggle="lightbox" data-gallery="example-gallery">
                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid">
@@ -105,7 +105,7 @@
           <div class="gallery__images">
 
             <?php if( have_rows('gallery_second') ): while ( have_rows('gallery_second') ) : the_row();?>
-              <?php $image = get_sub_field('images'); if( !empty($image) ): ?>
+              <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
                 <div class="col-xs-6 col-md-2 gallery__images-block">
                   <a href="<?php echo $image['url']; ?>" data-toggle="lightbox" data-gallery="example-gallery">
                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid">
@@ -136,131 +136,44 @@
           <div class="tab-content personal">
             <div class="tab-pane fade in active" id="instructors">
               <div class="slider-personal">
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/shedule-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
+
+
+                <?php if( have_rows('instructors') ): while ( have_rows('instructors') ) : the_row();?>
+                  <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
+                    <div class="slider-personal__block">
+                      <div class="slider-personal__img">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                      </div>
+                      <div class="slider-personal__text">
+                        <h3><?php the_sub_field('name'); ?></h3>
+                        <p><?php the_sub_field('position'); ?></p>
+                      </div>
+                    </div><!-- end slider-personal__block -->
+
+                  <?php endif; ?>
+                <?php  endwhile; endif; ?>
+
               </div>
               <!-- end slider-personal -->
             </div>
             <div class="tab-pane fade" id="administration">
               <div class="slider-personal">
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/shedule-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/shedule-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
-                <div class="slider-personal__block">
-                  <div class="slider-personal__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/personal-img1.png" alt="personal">
-                  </div>
-                  <div class="slider-personal__text">
-                    <h3>АЛЕКСЕЙ</h3>
-                    <p>ИНДИВИДУАЛЬНЫЙ ИНСТРУКТОР ПО БОКСУ</p>
-                  </div>
-                </div>
-                <!-- end slider-personal__block -->
+
+                <?php if( have_rows('administration') ): while ( have_rows('administration') ) : the_row();?>
+                  <?php $image = get_sub_field('image'); if( !empty($image) ): ?>
+                    <div class="slider-personal__block">
+                      <div class="slider-personal__img">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                      </div>
+                      <div class="slider-personal__text">
+                        <h3><?php the_sub_field('name'); ?></h3>
+                        <p><?php the_sub_field('position'); ?></p>
+                      </div>
+                    </div><!-- end slider-personal__block -->
+
+                  <?php endif; ?>
+                <?php  endwhile; endif; ?>
+
               </div>
               <!-- end slider-personal -->
             </div>
@@ -268,10 +181,9 @@
           <!-- end personal -->
         </div>
       </div>
+    </section><!-- end about-us__gallery -->
 
-
-    </section>
-    <!-- end about-us__gallery -->
+    <?php /*
     <section class="partners">
       <div class="container">
         <div class="row">
@@ -305,6 +217,7 @@
         </div>
       </div>
     </section><!-- end section.partners -->
+    */ ?>
   <?php endwhile; else: ?>
     <section>
       <h2 class="page-title inner-title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>

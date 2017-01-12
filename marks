@@ -1,0 +1,22 @@
+1. Кнопки на модальные окна не работают, их нету в верстке
+2. На многих страницах неправильная, несемантичная верстка. Много использований Н1-Н4 тегов, это очень плохо для оптимизации
+3. Телефоны и почта сверстаны не активнымы ссылками
+4. Верстальщик сделал для внутренних страниц отдельный файл, пришлось раскладывать по кусочкам
+5. "Смотреть на карте" не работает
+6. Карта не соответствует новым требования гугла, нету апи ключа (нужен домен и гуглоакаунт)\
+7. Верстка неадаптивная, с ошибками на мобильной
+8. Часть картинок была зашита в скрипты и имела неправильную ссылку, подправил
+9. Некоторые картинки из стилей отсутствовали, я отключил
+10. Наши партнеры вобще никак не были сделаны - ни текста, ни картинок, отключил`
+11. ссылки социалок в шапке нет активного состояния, да и пустые они
+12.
+
+
+
+
+
+<div class="col-xs-12 col-md-6"><div class="form-group">[text text-name id:contacts-name class:form-control placeholder "Имя"]</div><div class="form-group">[text text-phone id:contacts-name class:form-control placeholder "Телефон"]</div><div class="form-group">[text text-email id:contacts-name class:form-control placeholder "E-mail"]</div></div><div class="col-xs-12 col-md-6"><div class="form-group">[textarea textarea id:help-question class:form-control placeholder "Вопрос"]</div>[submit class:btn class:btn-solid "ОТПРАВИТЬ"]</div><div class="clearfix"></div>
+
+              <form action="#" role="form" class="f-form-help f-form-help--contacts">
+              <div class="col-xs-12 col-md-6"><div class="form-group">[text text-858 id:contacts-name class:form-control placeholder "Имя"]</div><div class="form-group">[text text-859 id:contacts-name class:form-control placeholder "Телефон"]</div><div class="form-group">[text text-777 id:contacts-name class:form-control placeholder "E-mail"]</div></div><div class="col-xs-12 col-md-6"><div class="form-group">[textarea textarea-551 id:help-question class:form-control placeholder "Вопрос"]</div>[submit class:btn class:btn-solid "ОТПРАВИТЬ"]</div><div class="clearfix"></div>
+              </form>
