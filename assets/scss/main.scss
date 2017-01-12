@@ -884,8 +884,7 @@ i {
 
     padding: 25px;
 
-
-            transition: .4s;
+    transition: .4s;
 
     color: #fff;
   }
@@ -2518,3 +2517,10 @@ footer {
 }
 
 @import 'import/wordpress';
+
+.slick-slider {
+  height: 410px;
+}
+.shedule__slider-nav {
+  height: 110px;
+}

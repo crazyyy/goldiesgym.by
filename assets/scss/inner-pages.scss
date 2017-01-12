@@ -338,8 +338,8 @@ table.all-services {
 
   color: #fff;
   p {
-    padding-left: 15px;
     padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -461,8 +461,10 @@ table.all-services {
 
 .shedule__text {
   margin-bottom: 50px;
-  p:not(:last-of-type) {
-    margin-bottom: 20px;
+
+  column-count: 2;
+  p {
+    margin-bottom: 18px;
   }
 }
 
