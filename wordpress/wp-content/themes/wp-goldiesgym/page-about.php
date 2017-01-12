@@ -56,7 +56,7 @@
                   <div class="about-us__advantages-block-inner">
                     <span><?php echo $i; ?></span>
                     <h3><?php the_sub_field('advantage_title'); ?></h3>
-                    <p>ss <?php the_sub_field('advantages_content'); ?></p>
+                    <p><?php the_sub_field('advantages_content'); ?></p>
                   </div>
                 </div><!-- end about-us__advantages-block -->
               <?php $i++; endwhile; endif; ?>

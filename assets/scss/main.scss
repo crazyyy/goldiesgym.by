@@ -884,10 +884,7 @@ i {
 
     padding: 25px;
 
-    -webkit-transition: .4s;
-       -moz-transition: .4s;
-        -ms-transition: .4s;
-         -o-transition: .4s;
+
             transition: .4s;
 
     color: #fff;
@@ -895,7 +892,7 @@ i {
   li {
     float: left;
     &:last-of-type a {
-      padding: 21px 10px 21px;
+      padding: 24px 10px;
 
       background: rgba(0, 0, 0, .45);
     }
