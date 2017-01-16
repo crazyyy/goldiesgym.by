@@ -16,25 +16,7 @@
           <div class="f-form-content">
             <div class="f-form">
               <h2>НУЖНА ИНДИВИДУАЛЬНАЯ КОНСУЛЬТАЦИЯ?</h2>
-              <form action="#" role="form" class="f-form-help">
-                <div class="col-xs-6 form-group">
-                  <input type="text" class="form-control" id="help-name2" placeholder="Ваше имя">
-                </div>
-                <div class="col-xs-6 form-group">
-                  <input type="text" class="form-control" id="help-phone2" placeholder="Телефон">
-                </div>
-                <div class="col-xs-12 form-group">
-                  <select class="form-control" name="help-question" id="help-question" >
-                  <option value=""></option>
-                    <option value="Вопрос 1">Вопрос 1</option>
-                    <option value="Вопрос 2">Вопрос 2</option>
-                  </select>
-                </div>
-                <div class="col-xs-12">
-                  <button type="submit" class="btn btn-solid">ОТПРАВИТЬ</button>
-                </div>
-                <div class="clearfix"></div>
-              </form>
+              <?php echo do_shortcode('[contact-form-7 id="1620" title="Footer Form" html_class="f-form-help"]'); ?>
             </div>
           </div>
           <!-- end f-form-content -->
@@ -51,6 +33,38 @@
     </div>
   </footer>
 </div>
+
+  <div class="modalbg modal-program-bg">
+    <div class="modal-body modal-program">
+    </div><!-- /.modal-program -->
+    <span class="modal-close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+  </div><!-- /.modalbg -->
+  <div class="modalbg modal-programform-bg">
+    <div class="modal-body modal-programform">
+      <?php echo do_shortcode('[contact-form-7 id="1617" title="Order Form"]'); ?>
+    </div><!-- /.modal-programform -->
+    <span class="modal-close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+  </div><!-- /.modalbg -->
+  <div class="modalbg modal-recall-bg">
+    <div class="modal-body modal-recall">
+      <?php echo do_shortcode('[contact-form-7 id="1614" title="Recall Form"]'); ?>
+    </div><!-- /.modal-recall -->
+    <span class="modal-close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+  </div><!-- /.modalbg -->
+  <div class="modalbg modal-gift-bg">
+    <div class="modal-body modal-gift">
+      <?php echo do_shortcode('[contact-form-7 id="1618" title="Gift Form"]'); ?>
+    </div><!-- /.modal-gift -->
+    <span class="modal-close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+  </div><!-- /.modalbg -->
+  <div class="modalbg modal-corporate-bg">
+    <div class="modal-body modal-corporate">
+      <?php echo do_shortcode('[contact-form-7 id="1619" title="Corporate Clients"]'); ?>
+    </div><!-- /.modal-gift -->
+    <span class="modal-close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+  </div><!-- /.modalbg -->
+
+
   <script>
     window.themefolder = "<?php echo get_template_directory_uri(); ?>"
   </script>

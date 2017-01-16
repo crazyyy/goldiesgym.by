@@ -3,10 +3,12 @@
   <div class="container">
     <div class="row">
       <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+      <div class="section-tittle">
+        <h2><?php the_title(); ?></h2>
+      </div><!-- end section-tittle -->
       <div class="section-body">
         <div class="news__block">
           <div class="col-sm-12 news__block-descr">
-            <h3 class="news__block-tittle"><?php the_title(); ?></h3>
             <?php the_content(); ?>
           </div>
           <div class="clearfix"></div>

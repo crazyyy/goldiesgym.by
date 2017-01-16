@@ -8,8 +8,7 @@
       <div class="row">
         <div class="section-tittle">
           <h2><?php the_title(); ?></h2>
-        </div>
-        <!-- end section-tittle -->
+        </div><!-- end section-tittle -->
         <div class="section-body">
           <div class="for-clients__text">
             <?php the_content(); ?>
@@ -32,8 +31,8 @@
           </div>
           <!-- end for-clients__blocks -->
           <div class="for-clients__button">
-            <a href="#" class="btn btn-solid btn-solid--romb">ЗАЯВКА НА КОРПОРАТИВНЫЙ ФИТНЕС<span></span></a>
-            <a href="#" class="btn btn-solid btn-solid--romb btn-mobile">ЗАЯВКА<span></span></a>
+            <a href="#" class="btn btn-solid btn-solid--romb for-clients__button">ЗАЯВКА НА КОРПОРАТИВНЫЙ ФИТНЕС<span></span></a>
+            <a href="#" class="btn btn-solid btn-solid--romb btn-mobile for-clients__button-btn">ЗАЯВКА<span></span></a>
           </div>
         </div>
         <!-- end section-body -->

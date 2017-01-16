@@ -76,6 +76,7 @@ body {
     }
     .header-bg {
       background: url(../img/bg-head.jpg) no-repeat 50% 50%;
+      background-size: cover;
     }
   }
 }
@@ -2523,4 +2524,78 @@ footer {
 }
 .shedule__slider-nav {
   height: 110px;
+}
+.shedule__slider-descr-full {
+  display: none;
+}
+.modalbg {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  flex-direction: row;
+
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .55);
+
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  &.modal-open {
+    display: flex;
+  }
+  .modal-body {
+    width: 400px;
+    padding: 25px;
+
+    border: 3px solid #fff;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: $base-box-shadow;
+    h6 {
+      font-size: 140%;
+      font-weight: bold;
+
+      text-align: center;
+    }
+    form {
+      width: 100%;
+      textarea,
+      label,
+      span,
+      input {
+        width: 100%;
+      }
+    }
+    &.modal-program {
+      width: 80%;
+      min-width: 400px;
+    }
+  }
+  .modal-close {
+    font-size: 36px;
+
+    position: absolute;
+    z-index: 10;
+    top: 25px;
+    right: 25px;
+
+    cursor: pointer;
+
+    color: #fff;
+    &:hover {
+      color: #947238;
+    }
+  }
+}
+.home-form-small {
+  .form-control {
+    color: #000;
+    background-color: #fff;
+  }
 }

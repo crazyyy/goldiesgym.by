@@ -14,14 +14,7 @@
         <div class="section-body">
           <div class="col-sm-5 contacts__left-wrap">
             <div class="contacts__left">
-              <p>
-                <i class="ic ic-f_phone"></i>
-                +375 (29) <span>365-53-57</span><br>
-                +375 (29) <span>512-44-52</span><br>
-                +375 (17) <span>902-34-32</span>
-              </p>
-              <p><i class="ic ic-f_marker"></i>ул. Клары Цеткин, 51а</p>
-              <p><i class="ic ic-f_email"></i>info@goldiesgym.by</p>
+              <?php the_content(); ?>
             </div>
           </div>
           <!-- end contacts__left-wrap -->

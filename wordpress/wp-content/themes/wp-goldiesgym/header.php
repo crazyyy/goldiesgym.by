@@ -9,6 +9,7 @@
 
   <!-- icons -->
   <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <!--[if lt IE 9]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -30,7 +31,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-5 col-md-6 h-top__left">
-              <p><i class="ic ic-w_marker"></i>ул. Клары Цеткин, 51а <a href="#">смотреть на карте</a></p>
+              <p><i class="ic ic-w_marker"></i>ул. Клары Цеткин, 51а <a href="#map">смотреть на карте</a></p>
             </div>
             <div class="col-sm-7 col-md-6 h-top__right">
               <div class="h-top__socials">
@@ -43,7 +44,7 @@
                   <i class="ic ic-w_phone"></i>
                   <span><small>+375 (29)</small> 5064707</span>
                 </p>
-                <a href="#">заказать звонок</a>
+                <a class="btn-recall" href="#">заказать звонок</a>
               </div>
             </div>
             <div class="clearfix"></div>

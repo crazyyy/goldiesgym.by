@@ -39,7 +39,10 @@
                     <div class="shedule__slider-descr-text">
                       <h3><?php the_sub_field('title'); ?></h3>
                       <?php the_sub_field('description'); ?>
-                      <a href="#" class="more" data-toggle="modal" data-target="#myModal7">подробнее о программе...</a>
+                      <div class="shedule__slider-descr-full">
+                        <?php the_sub_field('full_description'); ?>
+                      </div><!-- /.shedule__slider-descr-full -->
+                      <a href="#" class="more shedule__slider-descr-more">подробнее о программе...</a>
                     </div>
                     <!-- end shedule__slider-descr-text -->
                     <div class="shedule__slider-descr-bot">
@@ -48,8 +51,8 @@
                       <div class="clearfix"></div>
                     </div>
                     <!-- end shedule__slider-descr-bot -->
-                    <a href="<?php the_sub_field('link_test'); ?>" class="btn btn-solid btn-solid--romb">ЗАПИСАТЬСЯ НА ПРОБНОЕ ЗАНЯТИЕ<span></span></a>
-                    <a href="<?php the_sub_field('link'); ?>" class="btn btn-solid btn-solid--romb btn-mobile">ЗАПИСАТЬСЯ<span></span></a>
+                    <a href="#" class="btn btn-solid btn-solid--romb shedule__slider-btnorder" data-title="<?php the_sub_field('title'); ?>">ЗАПИСАТЬСЯ НА ПРОБНОЕ ЗАНЯТИЕ<span></span></a>
+                    <a href="#" class="btn btn-solid btn-solid--romb btn-mobile shedule__slider-btnorder--mobile" data-title="<?php the_sub_field('title'); ?>">ЗАПИСАТЬСЯ<span></span></a>
                   </div>
                 </div>
                 <!-- end shedule__slider-descr-wrap -->

@@ -73,182 +73,62 @@
         </div>
         <!-- end section-tittle -->
         <div class="section-body">
+
           <div class="col-sm-3 classes__nav">
             <ul class="nav nav-tabs nav-tabs--classes">
-              <li class="active"><a href="#tab1" data-toggle="tab"><span class="num">01</span><span>ТАЙСКИЙ <br>БОКС</span></a></li>
-              <li><a href="#tab2" data-toggle="tab"><span class="num">02</span><span>DANCE <br>KIDS</span></a></li>
-              <li><a href="#tab3" data-toggle="tab"><span class="num">03</span><span>STRONG <br>POWER</span></a></li>
-              <li><a href="#tab4" data-toggle="tab"><span class="num">04</span><span>DANCE <br>KIDS</span></a></li>
-              <li><a href="#tab5" data-toggle="tab"><span class="num">05</span><span>DANCE <br>KIDS</span></a></li>
+              <?php $i = 1; if( have_rows('classes') ): while ( have_rows('classes') ) : the_row();?>
+                <?php if ($i == '1') {
+                  $li = '<li class="active">';
+                } else {
+                  $li = '<li>';
+              }?>
+              <?php echo $li; ?><a href="#tab<?php echo $i; ?>" data-toggle="tab"><span class="num">0<?php echo $i; ?></span><span><?php the_sub_field('title'); ?></span></a></li>
+              <?php $i++; endwhile; endif; ?>
             </ul>
           </div>
+
           <div class="col-sm-9 classes__block">
             <div class="tab-content">
-              <div class="tab-pane fade in active" id="tab1">
+
+              <?php $i = 1; if( have_rows('classes') ): while ( have_rows('classes') ) : the_row();?>
+                <?php if ($i == '1') {
+                  $class = 'tab-pane fade in active';
+                } else {
+                  $class = 'tab-pane fade';
+              }?>
+              <div class="<?php echo $class; ?>" id="tab<?php echo $i; ?>">
                 <div class="col-sm-6 classes__descr--wrap">
                   <div class="classes__descr">
-                    <h2>ТАЙСКИЙ БОКС</h2>
-                    <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат только вам.</p>
-                    <p>Теперь никто не сможет обвинить вас в плагиате, ибо каждый текст Яндекс.Рефератов неповторим.</p>
-                    <p>Текстами рефератов можно пользоваться совершенно бесплатно, однако при транслировании и предоставлении </p>
-                    <a href="" class="btn btn-solid"><i class="ic ic-shedule"></i>РАСПИСАНИЕ</a>
+                    <h2><?php the_sub_field('title'); ?></h2>
+                    <?php the_sub_field('description'); ?>
+                    <a href="<?php echo home_url(); ?>/zanyatiya-i-klassy.htm" class="btn btn-solid"><i class="ic ic-shedule"></i>РАСПИСАНИЕ</a>
                   </div>
                 </div>
                 <!-- end classes__descr--wrap -->
                 <div class="col-sm-6 classes__teacher--wrap">
                   <div class="classes__teacher">
                     <div class="classes__teacher-img">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/teachers-img1.jpg" alt="teachers">
+                      <?php $image = get_sub_field('teacher_photo'); ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </div>
                     <div class="classes__teacher-name">
                       <p>ВЕДУЩИЙ КЛАССА</p>
-                      <h3>АЛЕКСЕЙ ПАНФИЛОВ</h3>
+                      <h3><?php the_sub_field('teacher_name'); ?></h3>
                     </div>
                     <div class="classes__teacher-info">
-                      <p><i class="ic ic-time"></i>ПН, CБ  c  12:00 - 14:00 </p>
-                      <p><i class="ic ic-map"></i>ЗАЛ N1</p>
-                      <p><i class="ic ic-check"></i>230 BYN / месяц</p>
+                      <p><i class="ic ic-time"></i><?php the_sub_field('time'); ?></p>
+                      <p><i class="ic ic-map"></i><?php the_sub_field('place'); ?></p>
+                      <p><i class="ic ic-check"></i><?php the_sub_field('cost'); ?></p>
                     </div>
                     <div class="classes__teacher-btn">
-                      <a href="#" class="btn btn-solid btn-solid--romb">ЗАПИСАТЬСЯ<span></span></a>
+                      <a href="#" class="btn btn-solid btn-solid--romb shedule__slider-btnorder" data-title="<?php the_sub_field('title'); ?>">ЗАПИСАТЬСЯ<span></span></a>
                     </div>
                   </div>
                 </div>
                 <!-- end classes__teacher--wrap -->
                 <div class="clearfix"></div>
               </div>
-              <div class="tab-pane fade" id="tab2">
-                <div class="col-sm-6 classes__descr--wrap">
-                  <div class="classes__descr">
-                    <h2>DANCE KIDS</h2>
-                    <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат только вам.</p>
-                    <p>Теперь никто не сможет обвинить вас в плагиате, ибо каждый текст Яндекс.Рефератов неповторим.</p>
-                    <p>Текстами рефератов можно пользоваться совершенно бесплатно, однако при транслировании и предоставлении </p>
-                    <a href="" class="btn btn-solid"><i class="ic ic-shedule"></i>РАСПИСАНИЕ</a>
-                  </div>
-                </div>
-                <!-- end classes__descr--wrap -->
-                <div class="col-sm-6 classes__teacher--wrap">
-                  <div class="classes__teacher">
-                    <div class="classes__teacher-img">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/teachers-img1.jpg" alt="teachers">
-                    </div>
-                    <div class="classes__teacher-name">
-                      <p>ВЕДУЩИЙ КЛАССА</p>
-                      <h3>АЛЕКСЕЙ ПАНФИЛОВ</h3>
-                    </div>
-                    <div class="classes__teacher-info">
-                      <p><i class="ic ic-time"></i>ПН, CБ  c  12:00 - 14:00 </p>
-                      <p><i class="ic ic-map"></i>ЗАЛ N1</p>
-                      <p><i class="ic ic-check"></i>230 BYN / месяц</p>
-                    </div>
-                    <div class="classes__teacher-btn">
-                      <a href="#" class="btn btn-solid btn-solid--romb">ЗАПИСАТЬСЯ<span></span></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- end classes__teacher--wrap -->
-                <div class="clearfix"></div>
-              </div>
-              <div class="tab-pane fade" id="tab3">
-                <div class="col-sm-6 classes__descr--wrap">
-                  <div class="classes__descr">
-                    <h2>STRONG POWER</h2>
-                    <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат только вам.</p>
-                    <p>Теперь никто не сможет обвинить вас в плагиате, ибо каждый текст Яндекс.Рефератов неповторим.</p>
-                    <p>Текстами рефератов можно пользоваться совершенно бесплатно, однако при транслировании и предоставлении </p>
-                    <a href="" class="btn btn-solid"><i class="ic ic-shedule"></i>РАСПИСАНИЕ</a>
-                  </div>
-                </div>
-                <!-- end classes__descr--wrap -->
-                <div class="col-sm-6 classes__teacher--wrap">
-                  <div class="classes__teacher">
-                    <div class="classes__teacher-img">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/teachers-img1.jpg" alt="teachers">
-                    </div>
-                    <div class="classes__teacher-name">
-                      <p>ВЕДУЩИЙ КЛАССА</p>
-                      <h3>АЛЕКСЕЙ ПАНФИЛОВ</h3>
-                    </div>
-                    <div class="classes__teacher-info">
-                      <p><i class="ic ic-time"></i>ПН, CБ  c  12:00 - 14:00 </p>
-                      <p><i class="ic ic-map"></i>ЗАЛ N1</p>
-                      <p><i class="ic ic-check"></i>230 BYN / месяц</p>
-                    </div>
-                    <div class="classes__teacher-btn">
-                      <a href="#" class="btn btn-solid btn-solid--romb">ЗАПИСАТЬСЯ<span></span></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- end classes__teacher--wrap -->
-                <div class="clearfix"></div>
-              </div>
-              <div class="tab-pane fade" id="tab4">
-                <div class="col-sm-6 classes__descr--wrap">
-                  <div class="classes__descr">
-                    <h2>DANCE KIDS</h2>
-                    <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат только вам.</p>
-                    <p>Теперь никто не сможет обвинить вас в плагиате, ибо каждый текст Яндекс.Рефератов неповторим.</p>
-                    <p>Текстами рефератов можно пользоваться совершенно бесплатно, однако при транслировании и предоставлении </p>
-                    <a href="" class="btn btn-solid"><i class="ic ic-shedule"></i>РАСПИСАНИЕ</a>
-                  </div>
-                </div>
-                <!-- end classes__descr--wrap -->
-                <div class="col-sm-6 classes__teacher--wrap">
-                  <div class="classes__teacher">
-                    <div class="classes__teacher-img">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/teachers-img1.jpg" alt="teachers">
-                    </div>
-                    <div class="classes__teacher-name">
-                      <p>ВЕДУЩИЙ КЛАССА</p>
-                      <h3>АЛЕКСЕЙ ПАНФИЛОВ</h3>
-                    </div>
-                    <div class="classes__teacher-info">
-                      <p><i class="ic ic-time"></i>ПН, CБ  c  12:00 - 14:00 </p>
-                      <p><i class="ic ic-map"></i>ЗАЛ N1</p>
-                      <p><i class="ic ic-check"></i>230 BYN / месяц</p>
-                    </div>
-                    <div class="classes__teacher-btn">
-                      <a href="#" class="btn btn-solid btn-solid--romb">ЗАПИСАТЬСЯ<span></span></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- end classes__teacher--wrap -->
-                <div class="clearfix"></div>
-              </div>
-              <div class="tab-pane fade" id="tab5">
-                <div class="col-sm-6 classes__descr--wrap">
-                  <div class="classes__descr">
-                    <h2>STRONG POWER</h2>
-                    <p>Нажав на кнопку «Написать реферат», вы лично создаете уникальный текст, причем именно от вашего нажатия на кнопку зависит, какой именно текст получится — таким образом, авторские права на реферат принадлежат только вам.</p>
-                    <p>Теперь никто не сможет обвинить вас в плагиате, ибо каждый текст Яндекс.Рефератов неповторим.</p>
-                    <p>Текстами рефератов можно пользоваться совершенно бесплатно, однако при транслировании и предоставлении </p>
-                    <a href="" class="btn btn-solid"><i class="ic ic-shedule"></i>РАСПИСАНИЕ</a>
-                  </div>
-                </div>
-                <!-- end classes__descr--wrap -->
-                <div class="col-sm-6 classes__teacher--wrap">
-                  <div class="classes__teacher">
-                    <div class="classes__teacher-img">
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/teachers-img1.jpg" alt="teachers">
-                    </div>
-                    <div class="classes__teacher-name">
-                      <p>ВЕДУЩИЙ КЛАССА</p>
-                      <h3>АЛЕКСЕЙ ПАНФИЛОВ</h3>
-                    </div>
-                    <div class="classes__teacher-info">
-                      <p><i class="ic ic-time"></i>ПН, CБ  c  12:00 - 14:00 </p>
-                      <p><i class="ic ic-map"></i>ЗАЛ N1</p>
-                      <p><i class="ic ic-check"></i>230 BYN / месяц</p>
-                    </div>
-                    <div class="classes__teacher-btn">
-                      <a href="#" class="btn btn-solid btn-solid--romb">ЗАПИСАТЬСЯ<span></span></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- end classes__teacher--wrap -->
-                <div class="clearfix"></div>
-              </div>
+              <?php $i++; endwhile; endif; ?>
+
             </div>
           </div>
           <div class="clearfix"></div>
@@ -266,20 +146,8 @@
           <p>наши специалисты проконсультируют</p>
         </div>
         <div class="col-md-6 form-help__block">
-          <form action="#" role="form" class="form-help">
-            <div class="col-sm-9">
-              <div class="form-group">
-                <input type="text" class="form-control" id="help-name" placeholder="Ваше имя">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="help-phone" placeholder="Ваш телефон">
-              </div>
-            </div>
-            <div class="col-sm-3 form-help__btn">
-              <button type="submit" class="btn btn-send"><i class="ic ic-send"></i></button>
-            </div>
-            <div class="clearfix"></div>
-          </form>
+          <?php echo do_shortcode('[contact-form-7 id="1624" title="Home Small Form" html_class="form-help home-form-small"]'); ?>
+
         </div>
         <div class="clearfix"></div>
       </div>
