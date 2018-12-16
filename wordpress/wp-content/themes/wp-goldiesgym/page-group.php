@@ -83,84 +83,8 @@
             </div>
             <div class="col-md-9">
               <div class="table-responsive">
-                <table class="table shedule__table">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>ПН</th>
-                      <th>ВТ</th>
-                      <th>СР</th>
-                      <th>ЧТ</th>
-                      <th>ПТ</th>
-                      <th>СБ</th>
-                      <th>ВС</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>9:00</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>11:00</td>
-                      <td></td>
-                      <td></td>
-                      <td><span class="green">90x60x90</span></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td><span class="brown">TABATA</span></td>
-                    </tr>
-                    <tr>
-                      <td>13:00</td>
-                      <td><span class="pink">STRETCH + PILATES</span></td>
-                      <td></td>
-                      <td><span class="green">90x60x90</span></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td><span class="brown">TABATA</span></td>
-                    </tr>
-                    <tr>
-                      <td>14:00</td>
-                      <td><span class="pink">STRETCH + PILATES</span></td>
-                      <td></td>
-                      <td><span class="green">90x60x90</span></td>
-                      <td></td>
-                      <td><span class="blue">TOTAL BODY</span></td>
-                      <td></td>
-                      <td><span class="brown">TABATA</span></td>
-                    </tr>
-                    <tr>
-                      <td>16:00</td>
-                      <td></td>
-                      <td></td>
-                      <td><span class="green">90x60x90</span></td>
-                      <td></td>
-                      <td><span class="brown">TABATA</span></td>
-                      <td></td>
-                      <td><span class="pink">STRETCH + PILATES</span></td>
-                    </tr>
-                    <tr>
-                      <td>18:00</td>
-                      <td><span class="pink">STRETCH + PILATES</span></td>
-                      <td></td>
-                      <td><span class="green">90x60x90</span></td>
-                      <td></td>
-                      <td><span class="blue">TOTAL BODY</span></td>
-                      <td></td>
-                      <td><span class="brown">TABATA</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- end table-responsive -->
+                <?php the_field('table_schedule'); ?>
+              </div><!-- end table-responsive -->
             </div>
             <div class="clearfix"></div>
           </div>

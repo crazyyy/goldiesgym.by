@@ -147,7 +147,6 @@
         </div>
         <div class="col-md-6 form-help__block">
           <?php echo do_shortcode('[contact-form-7 id="1624" title="Home Small Form" html_class="form-help home-form-small"]'); ?>
-
         </div>
         <div class="clearfix"></div>
       </div>
@@ -357,20 +356,7 @@
           <p>наши специалисты проконсультируют</p>
         </div>
         <div class="col-md-6 form-help__block">
-          <form action="#" role="form" class="form-help">
-            <div class="col-sm-9">
-              <div class="form-group">
-                <input type="text" class="form-control" id="help-name1" placeholder="Ваше имя">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="help-phone1" placeholder="Ваш телефон">
-              </div>
-            </div>
-            <div class="col-sm-3 form-help__btn">
-              <button type="submit" class="btn btn-send"><i class="ic ic-send"></i></button>
-            </div>
-            <div class="clearfix"></div>
-          </form>
+          <?php echo do_shortcode('[contact-form-7 id="1624" title="Home Small Form" html_class="form-help home-form-small"]'); ?>
         </div>
         <div class="clearfix"></div>
       </div>
